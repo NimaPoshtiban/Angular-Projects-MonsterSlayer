@@ -1,0 +1,94 @@
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+h2{
+  margin: 1rem 0;
+}
+
+header{
+  background: rgb(161, 28, 28);
+  width: 100%;
+  height: 10%;
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header>span{
+  color:white;
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+}
+
+.game{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game > div{
+  width: 90%;
+  /* background: red; */
+}
+
+.section{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 26%);
+  text-align: center;
+  margin: 2rem 0;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.monster-health,
+.player-health{
+  margin: 1rem 0;
+  width: 100%;
+  height: 42px;
+  border:  1px solid #575757 ;
+}
+
+.monster-healthbar,
+.player-healthbar{
+  background-color: #00a876;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button{
+  width: 20%;
+  border-radius: 12px;
+  background: purple;
+  color: aliceblue;
+  box-shadow: 1px 3px 8px 2px purple;
+}
+button:hover{
+  cursor: pointer;
+}
+
+button:disabled{
+  background-color: gainsboro;
+  color: #575757;
+}
+
+.green{
+  background: #00a876;
+  color: aliceblue;
+}
+
+.red{
+  background: rgb(121, 17, 17);
+  color: aliceblue;
+}
+
+.white{
+  background: rgba(0, 0,0,20%);
+}
