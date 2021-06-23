@@ -14,17 +14,17 @@ export class AppComponent {
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  onMonsterAttack(): void {
+  public onMonsterAttack(): void {
     this.playerHealth -= this.randomNumber(8, 15);
   }
 
-  onPlayerAttack(): void {
+  public onPlayerAttack(): void {
     this.monsterHealth -= this.randomNumber(5, 12);
     this.onMonsterAttack();
     this.round++;
   }
 
-  onSpecialAttack(): void {
+  public onSpecialAttack(): void {
     if (this.isSpecialAttackAllowed()) {
       this.monsterHealth -= this.randomNumber(10, 25);
       this.onMonsterAttack();
@@ -33,23 +33,23 @@ export class AppComponent {
     return;
   }
 
-  isSpecialAttackAllowed(): boolean {
+  public isSpecialAttackAllowed(): boolean {
     return this.round % 3 === 0 ? true : false;
   }
 
-  onPlayerHeal(): void {
+  public onPlayerHeal(): void {
     this.playerHealth += this.randomNumber(8, 20);
     this.onMonsterAttack();
     this.round++;
   }
 
   public getMonsterHealth(): number {
-    if(this.monsterHealth <0) return 0
+    if (this.monsterHealth < 0) return 0;
     return this.monsterHealth;
   }
 
   public getPlayerHealth(): number {
-    if(this.playerHealth < 0) return 0
+    if (this.playerHealth < 0) return 0;
     return this.playerHealth;
   }
 
@@ -59,15 +59,15 @@ export class AppComponent {
     this.round = 0;
   }
 
-  public getCurrentStatus():number {
-    if (this.playerHealth <= 0 && this.monsterHealth <= 0){
-      return 0
-    }else if(this.playerHealth <= 0){
-      return -1
-    }else if (this.monsterHealth <= 0){
-      return 1
-    }else{
-      return 2
+  public getCurrentStatus(): number {
+    if (this.playerHealth <= 0 && this.monsterHealth <= 0) {
+      return 0;
+    } else if (this.playerHealth <= 0) {
+      return -1;
+    } else if (this.monsterHealth <= 0) {
+      return 1;
+    } else {
+      return 2;
     }
   }
 }
