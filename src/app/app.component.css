@@ -30,7 +30,7 @@ header>span{
 }
 
 .game > div{
-  width: 90%;
+  width: 70%;
   /* background: red; */
 }
 
@@ -65,7 +65,7 @@ header>span{
 
 button{
   width: 20%;
-  border-radius: 12px;
+  border-radius: 2px;
   background: purple;
   color: aliceblue;
   box-shadow: 1px 3px 8px 2px purple;
